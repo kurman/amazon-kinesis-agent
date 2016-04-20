@@ -128,6 +128,7 @@ JVM_ARGS="-server -Xms${JAVA_START_HEAP} -Xmx${JAVA_MAX_HEAP} $JVM_ARGS"
 
 MAIN_CLASS="com.amazon.kinesis.streaming.agent.Agent"
 
+
 exec $JAVACMD $JVM_ARGS "$OOME_ARGS" \
   -cp "$CLASSPATH" \
   $MAIN_CLASS "$@"

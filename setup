@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/bin/ash
 
 # Make sure only root can run our script
 if [ "$(id -u)" != "0" ]; then
@@ -75,7 +75,7 @@ download_dependencies() {
                   org.xerial:sqlite-jdbc:3.8.11.2 \
                   joda-time:joda-time:2.8.2 \
                   org.projectlombok:lombok:1.16.6"
-  
+
   for package in ${remote_mvn_pkg}
   do
    download_jar $(echo $package | tr : " ")
